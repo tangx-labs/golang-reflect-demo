@@ -48,6 +48,8 @@ func reflectValue(v interface{}) {
 	rv := reflect.ValueOf(v)
 	logrus.Info(rv.Kind(), rv.Type())
 
+	// Indirect 只包含了一层 direct
+	// 如果 **main.Person 这种数据结构， 得到的还是 reflect.Ptr 指针类型。
 	irv := reflect.Indirect(rv)
 	logrus.Info(irv.Kind(), irv.Type())
 
