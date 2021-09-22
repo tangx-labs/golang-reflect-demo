@@ -32,16 +32,9 @@ func reflectType(v interface{}) {
 	iirt := irt.Elem()
 	logrus.Info(iirt, iirt.Kind())
 
-	dert := deref(rt)
+	dert := DerefType(rt)
 	logrus.Info(dert, dert.Kind())
 
-}
-
-func deref(rt reflect.Type) reflect.Type {
-	for rt.Kind() == reflect.Ptr {
-		rt = rt.Elem()
-	}
-	return rt
 }
 
 func reflectValue(v interface{}) {
@@ -61,14 +54,6 @@ func reflectValue(v interface{}) {
 	}
 
 	// 4. deref
-	iirv := derefValue(rv)
+	iirv := DerefValue(rv)
 	logrus.Info(iirv.Kind(), iirv.Type())
-}
-
-func derefValue(rv reflect.Value) reflect.Value {
-	for rv.Kind() == reflect.Ptr {
-		rv = rv.Elem()
-	}
-
-	return rv
 }

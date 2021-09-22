@@ -7,6 +7,16 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+// var p = &Person{
+// 	Name: "zhangsan",
+// 	Age:  10,
+// 	Addr: struct {
+// 		City string
+// 	}{
+// 		City: "chengdu",
+// 	},
+// }
+
 func main() {
 	p := Person{
 		Name: "zhangsan",
