@@ -25,7 +25,7 @@ func Test_Rule2(t *testing.T) {
 func rule2(rv reflect.Value) {
 	// check
 	if !rv.CanInterface() {
-		fmt.Println("rv is not settable: ", rv.Type())
+		fmt.Println("rv can not convert to interface object: ", rv.Type())
 		return
 	}
 
