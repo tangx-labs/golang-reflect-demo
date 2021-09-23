@@ -38,10 +38,8 @@ func rule3(rv reflect.Value) {
 	switch rv.Kind() {
 	case reflect.String:
 		rv.SetString("tangxin")
-		fmt.Println("set string")
 	case reflect.Int:
 		rv.SetInt(333)
-		fmt.Println("set int")
 	default:
 		fmt.Println("not support kind: ", rv.Kind())
 	}
