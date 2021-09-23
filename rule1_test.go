@@ -17,7 +17,12 @@ func Test_Rule1(t *testing.T) {
 			City: "chengdu",
 		},
 	}
+	rule1(p)  // ptr *main.Person
+	rule1(&p) // ptr **main.Person
 
-	rv := reflect.ValueOf(&p)
-	fmt.Println(rv.Kind(), rv.Type()) // ptr **main.Person
+}
+
+func rule1(v interface{}) {
+	rv := reflect.ValueOf(v)
+	fmt.Println(rv.Kind(), rv.Type())
 }
