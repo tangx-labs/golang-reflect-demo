@@ -18,10 +18,12 @@ func (stu *student) SetDefaults() {
 	}
 }
 
+// 没有传参的方法
 func (stu *student) Greeting() {
 	fmt.Printf("hello %s, %d years old\n", stu.Name, stu.Age)
 }
 
+// 具有传参的方法
 func (stu *student) Aloha(name string) {
 	fmt.Println("aloha,", name)
 }
@@ -39,7 +41,7 @@ func Test_MethodCall(t *testing.T) {
 
 	stu.Greeting()
 	methodCall(prv, "SetDefaults")
-	methodCall(rv, "Greeting") // 这里找到到
+	methodCall(rv, "Greeting") // 方法接收者不匹配，无法找到对应方法。
 	methodCall(prv, "Aloha", reflect.ValueOf("boss"))
 }
 
