@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// 指向指针的指针对象
+// 第一定律: 对象类型转指针类型
 func Test_Rule1(t *testing.T) {
 	p := &Person{
 		Name: "zhangsan",

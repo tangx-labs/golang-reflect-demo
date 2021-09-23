@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-// 反射对象转换为指针对象
+// 第二定律 反射对象转换为指针对象
 func Test_Rule2(t *testing.T) {
 	p := &Person{
 		Name: "zhangsan",
