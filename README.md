@@ -23,3 +23,7 @@
 
 `rv.CanSet()`
 
+
+## 一起学习
+
+![qrcode](https://tangx.in/mp/qrcode.png)
